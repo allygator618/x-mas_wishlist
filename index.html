@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Christmas Wishlist</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1 id="site-title">Christmas Wishlist</h1>
+    <p id="site-subtitle"></p>
+  </header>
+
+  <div id="local-banner" class="banner" hidden>
+    Purchased marks are currently saved on this device only. Finish the Firebase setup so everyone sees the same list.
+  </div>
+
+  <main>
+    <section id="grid" class="grid" aria-live="polite"></section>
+    <p id="empty" class="empty" hidden>No items yet.</p>
+  </main>
+
+  <footer class="site-footer">
+    <p>Marking an item as purchased is anonymous. Tapped by mistake? Just tap "Undo" on the card.</p>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

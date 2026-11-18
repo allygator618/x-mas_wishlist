@@ -1,0 +1,125 @@
+:root {
+  --red: #b3262e;
+  --red-dark: #8f1d24;
+  --green: #1f5f3f;
+  --cream: #fdf8f0;
+  --ink: #2b2b2b;
+  --card: #ffffff;
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.4;
+}
+
+.site-header {
+  background: linear-gradient(135deg, var(--red), var(--green));
+  color: #fff;
+  text-align: center;
+  padding: 2.2rem 1rem 1.8rem;
+}
+.site-header h1 { margin: 0 0 0.3rem; font-size: clamp(1.6rem, 5vw, 2.4rem); }
+.site-header p { margin: 0; opacity: 0.92; }
+.site-header p:empty { display: none; }
+
+.banner {
+  background: #fff3cd;
+  color: #664d03;
+  text-align: center;
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+}
+
+main { max-width: 1100px; margin: 0 auto; padding: 1.5rem 1rem 2rem; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 1.2rem;
+}
+
+.card {
+  position: relative;
+  background: var(--card);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.15s ease, filter 0.2s ease, opacity 0.2s ease;
+}
+.card:hover { transform: translateY(-3px); }
+
+/* The whole tile is clickable: the link's ::after stretches over the card */
+.card-link {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.card-link::after { content: ""; position: absolute; inset: 0; }
+.card-link:focus-visible { outline: 3px solid var(--green); outline-offset: -3px; }
+
+.card-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: #f4f1ea;
+  display: block;
+}
+
+.card-body { padding: 0.8rem 1rem 0.4rem; }
+.card-name { margin: 0; font-size: 1.05rem; font-weight: 600; }
+.card-size { margin: 0.25rem 0 0; font-size: 0.9rem; color: #666; }
+
+.toggle {
+  position: relative;
+  z-index: 2; /* sits above the stretched link so it doesn't navigate */
+  margin: 0.6rem 1rem 1rem;
+  padding: 0.55rem 0.8rem;
+  border: 2px solid var(--green);
+  background: #fff;
+  color: var(--green);
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.toggle:hover { background: var(--green); color: #fff; }
+
+.badge {
+  display: none;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
+  background: #444;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+}
+
+/* Purchased state: greyed out, but still readable and undo-able */
+.card.purchased { filter: grayscale(1); opacity: 0.55; }
+.card.purchased .badge { display: block; }
+.card.purchased .toggle { border-color: #555; color: #333; }
+.card.purchased .toggle:hover { background: #555; color: #fff; }
+.card.purchased:hover { transform: none; }
+
+.empty { text-align: center; color: #777; }
+
+.site-footer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #777;
+  padding: 0 1rem 2rem;
+}
