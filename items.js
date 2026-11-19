@@ -123,5 +123,9 @@ export const items = [
     image: "https://images.journeys.com/images/products/1_828193_ZM.JPG",
     link: "https://www.journeys.com/product/womens-timberland-premium-6-boot-wheat-538171?gclsrc=aw.ds&gad_source=1&gad_campaignid=23010761998&gbraid=0AAAAAD-iGoQ0Fr5osOZ--WDGAhjBbcMDE&gclid=Cj0KCQiAtvXXBhC2ARIsAJc8SUQjbbaAzUMwVYqx-Hx9yRkWsCr5feUkBKA43rvScg1OdPxrMozcSHAaAuwrEALw_wcB",
     size: "Women's 11"
+  },
+  {
+    name: "Money or Gift cards are HAPPILY accepted",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRvxfkGkywWxTIbxdCaqLdDdZrVDeXvYeOs0tWpM1XWw&s=10"
   }
 ]
