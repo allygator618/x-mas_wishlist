@@ -125,10 +125,6 @@ export const items = [
     size: "Women's 11"
   },
   {
-    name: "Money or Gift cards are HAPPILY accepted",
-    image: "https://media.istockphoto.com/id/1502319014/photo/100-new-us-dollar-bills-on-black-background.jpg?s=612x612&w=0&k=20&c=fuUyhCzHaphADwEIUXhDR89r4H4dEQRgWvphPV_lS2E="
-  },
-  {
     name: "Wolverine - PS5",
     image: "https://target.scene7.com/is/image/Target/GUEST_118db1e9-b201-49c8-9146-73b9a4db896b?wid=750&qlt=80",
     link: "https://www.target.com/p/marvel-39-s-wolverine-playstation-5/-/A-1011826143?sid=&TCID=PDS-22806998635&gclsrc=aw.ds&gad_source=1&gad_campaignid=22797432708&gbraid=0AAAAAD-5dfbzzy0T8KH1KX6wBv5NZxImv&gclid=Cj0KCQiA2frXBhC_ARIsAPTFcdMSnP_qtPQG-IxbCBLxziEEm_m47vVFLNtjupPrWsSEp8gOH8yxed0aAqPMEALw_wcB"
